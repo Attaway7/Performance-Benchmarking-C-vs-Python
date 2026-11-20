@@ -139,7 +139,7 @@ For reliable results:
 - Use consistent input sizes when comparing implementations
 - Avoid running multiple benchmarks simultaneously
 
-- ## Useful Materials
+## Useful Materials
 - Slideshow Containing Presentation: https://docs.google.com/presentation/d/1P4UdjYQM0EMHtSODnv2Yj1kHiS1K1PLhLBnQtf7vzFc/edit?usp=sharing
 - [Hyperfine](https://github.com/sharkdp/hyperfine): Command-line benchmarking tool used to measure and compare execution times across C and Python implementations. Hyperfine was used to perform repeated measurements, warmup runs, and statistical comparisons.
 - [NumPy](https://numpy.org/): Python library for numerical computing. Used for matrix multiplication to explore how optimized native libraries can outperform straightforward C implementations.
