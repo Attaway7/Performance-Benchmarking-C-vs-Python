@@ -4,7 +4,7 @@ import sys
 
 def main() -> int:
     if len(sys.argv) != 2:
-        print("Usage: python3 primes.py LIMIT (nonnegative integer)", file=sys.stderr)
+        print(f"Usage: {sys.argv[0]} LIMIT (nonnegative integer)", file=sys.stderr)
         return 2
 
     try:
