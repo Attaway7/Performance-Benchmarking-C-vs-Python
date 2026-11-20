@@ -39,13 +39,13 @@ bench: test
 	fi; \
 	printf 'PASS: %s\n\n' "$$a"; \
 	printf 'Benchmarking all three implementations...\n'; \
-	hyperfine --warmup 3 --runs 30 --export-json "results_$${limit}.json" \
+	hyperfine --warmup 3 --runs 30 \
 		"./findprimes_O0 $$limit" \
 		"./findprimes_O2 $$limit" \
 		"$(PYTHON) findprimes.py $$limit"
 
 clean:
-	rm -f findprimes_O0 findprimes_O2 results_*.json
+	rm -f findprimes_O0 findprimes_O2
 
 help:
 	@printf 'make build        Compile both C executables\nmake test         Compile and check known results\nmake bench        Prompt for limit, verify outputs, run Hyperfine\nmake bench N=...  Run benchmark without prompting\nmake clean        Remove built executables and benchmark JSON\n'
